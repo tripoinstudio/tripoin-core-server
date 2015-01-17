@@ -1,19 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.tripoin.gwt</groupId>
-    <artifactId>root-gwt</artifactId>
+    <groupId>com.tripoin.core</groupId>
+    <artifactId>tripoin-root-core</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-    	<!-- Convenience property to set the GWT version -->
-        <gwt.version>2.5.1</gwt.version>
-        <gwt.maven.plugin.version>2.5.1</gwt.maven.plugin.version>
-        
+    	       
         <!-- Convenience property to set the Hibernate version -->
         <hibernate.core.version>4.1.5.SP1</hibernate.core.version>
         <hibernate.common.version>3.2.0.Final</hibernate.common.version>
@@ -78,9 +74,10 @@
     </dependencies>
 
     <modules>
-        <module>gwt-shared</module>
-        <module>gwt-server</module>
-        <module>gwt-client</module>
+        <module>tripoin-core-dao</module>
+        <module>tripoin-core-service</module>        
+        <module>tripoin-core-security</module>
+        <module>tripoin-core-model</module>        
     </modules>
 
 </project>
