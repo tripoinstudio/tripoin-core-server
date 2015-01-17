@@ -11,7 +11,7 @@
     <organization>
         <name>Tripoin</name>
     </organization>
-    <description>GWT Shared component</description>
+    <description>GWT Client component</description>
 
     <build>
         <resources>
@@ -37,21 +37,17 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>com.tripoin.gwt</groupId>
-            <artifactId>tripoin-gwt-shared</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+        <!-- refer tripoin-gwt -->
         <dependency>
             <groupId>com.tripoin.gwt</groupId>
             <artifactId>tripoin-gwt-server</artifactId>
             <version>1.0.0</version>
         </dependency>
-          <!-- refer javaee -->
+        <!-- refer javaee -->
 		<dependency>
             <groupId>javaee</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>5</version>
+            <version>${javaee.version}</version>
             <scope>provided</scope>
         </dependency>		
     </dependencies>
