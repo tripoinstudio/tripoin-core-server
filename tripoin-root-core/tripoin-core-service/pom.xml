@@ -11,7 +11,7 @@
     <organization>
         <name>Tripoin</name>
     </organization>
-    <description>GWT Shared component</description>
+    <description>Core Service component</description>
 
     <build>
         <resources>
@@ -35,5 +35,18 @@
             </plugin>
         </plugins>
     </build>
+        
+    <dependencies>
+        <dependency>
+            <groupId>com.tripoin.core</groupId>
+            <artifactId>tripoin-core-dao</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tripoin.core</groupId>
+            <artifactId>tripoin-core-security</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

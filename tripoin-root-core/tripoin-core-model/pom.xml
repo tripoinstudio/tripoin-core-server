@@ -11,7 +11,7 @@
     <organization>
         <name>Tripoin</name>
     </organization>
-    <description>GWT Shared component</description>
+    <description>Core Model component</description>
 
     <build>
         <resources>

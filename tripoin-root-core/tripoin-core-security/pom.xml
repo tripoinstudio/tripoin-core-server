@@ -11,7 +11,7 @@
     <organization>
         <name>Tripoin</name>
     </organization>
-    <description>GWT Shared component</description>
+    <description>Core Security component</description>
 
     <build>
         <resources>
@@ -34,6 +34,6 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>        
 
 </project>
