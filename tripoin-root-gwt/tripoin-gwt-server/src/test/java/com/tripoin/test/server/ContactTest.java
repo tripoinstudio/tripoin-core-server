@@ -22,6 +22,7 @@ import com.tripoin.test.pojo.Contact;
 		"classpath*:/META-INF/spring/dataSourceContext.xml" })
 public class ContactTest implements ApplicationContextAware  {
 	
+		
 	private static transient final Logger LOGGER = LoggerFactory.getLogger(ContactTest.class);
 	
 	@Autowired
