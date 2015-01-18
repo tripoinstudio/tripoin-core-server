@@ -13,7 +13,7 @@
         <level value="ALL"/>
     </logger>
 
-    <logger name="com.rdlfdl.rdl">
+    <logger name="com.tripoin">
         <level value="ALL"/>
     </logger>
 
