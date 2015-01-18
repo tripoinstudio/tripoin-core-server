@@ -34,6 +34,15 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>        
+    </build>    
+    
+    <dependencies> 
+		<!-- refer tripoin-core --> 
+        <dependency>
+            <groupId>com.tripoin.core</groupId>
+            <artifactId>tripoin-core-model</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>    
 
 </project>

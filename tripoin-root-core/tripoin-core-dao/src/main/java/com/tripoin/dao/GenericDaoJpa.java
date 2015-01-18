@@ -1,0 +1,19 @@
+package com.tripoin.dao;
+
+import java.io.Serializable;
+import java.util.List;
+
+public interface GenericDaoJpa {
+	public <T> T loadObject(Class<T> objectType, Serializable key) throws Exception ;
+	
+	public <T> List<T> loadObjects(Class<T> objectType) throws Exception;
+	
+	public <T> List<T> loadObjectsFilterKey(Class<T> objectType, Serializable key) throws Exception;
+	
+	public void saveObject(Class<?> objectType) throws Exception;
+	
+	public void updateObject(Class<?> objectType, Serializable key) throws Exception;
+	
+	public void deleteObject(Class<?> objectType) throws Exception;
+
+}

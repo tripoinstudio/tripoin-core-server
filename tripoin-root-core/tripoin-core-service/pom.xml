@@ -37,14 +37,10 @@
     </build>
         
     <dependencies>
+		<!-- refer tripoin-core -->	
         <dependency>
             <groupId>com.tripoin.core</groupId>
             <artifactId>tripoin-core-dao</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.tripoin.core</groupId>
-            <artifactId>tripoin-core-security</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>
