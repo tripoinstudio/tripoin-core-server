@@ -43,11 +43,6 @@
             <artifactId>tripoin-core-service</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.tripoin.core</groupId>
-            <artifactId>tripoin-core-model</artifactId>
-            <version>1.0.0</version>
-        </dependency>
     </dependencies>
 
 </project>
