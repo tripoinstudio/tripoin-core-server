@@ -13,20 +13,20 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.tripoin.service.GenericManagerJpa;
+import com.tripoin.service.IGenericManagerJpa;
 import com.tripoin.test.pojo.Contact;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { 
 		"classpath*:/META-INF/spring/applicationContext-jpa.xml",
-		"classpath*:/META-INF/spring/dataSourceContext.xml" })
+		"classpath*:/META-INF/spring/datasource/dataSourceContext_sql_server.xml" })
 public class ContactTest implements ApplicationContextAware  {
 	
 		
 	private static transient final Logger LOGGER = LoggerFactory.getLogger(ContactTest.class);
 	
 	@Autowired
-	private GenericManagerJpa contactService;
+	private IGenericManagerJpa contactService;
 	
 	private ApplicationContext applicationContext;
 	
