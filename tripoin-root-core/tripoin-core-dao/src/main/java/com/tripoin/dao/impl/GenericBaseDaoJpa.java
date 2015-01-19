@@ -8,11 +8,11 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tripoin.dao.base.BaseDaoJpa;
+import com.tripoin.dao.base.ABaseDaoJpa;
 
 
 @Repository("genericBaseDaoJpa")
-public class GenericBaseDaoJpa extends BaseDaoJpa {
+public class GenericBaseDaoJpa extends ABaseDaoJpa {
 
 	@Override
 	@Transactional
