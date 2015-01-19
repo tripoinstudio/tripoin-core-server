@@ -34,14 +34,14 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath*:/META-INF/resources.properties</value>
+				<value>classpath*:/META-INF/properties/resources_sql_server.properties</value>
 			</list>
 		</property>
 	</bean>
 	
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="false">
         <property name="driverClassName" value="${db.driverclass}"/>
-        <property name="url" value="jdbc:jtds:sqlserver://${host.db}:${db.port}/${db.schemaName};instance=${db.instanceName};useNTLMv2=true;"/>
+        <property name="url" value="${db.url}${db.host}:${db.port}/${db.schemaName};instance=${db.instanceName};useNTLMv2=${db.ntlm};"/>
         <property name="poolPreparedStatements" value="true"/>
         <property name="maxActive" value="10" />
         <property name="maxWait" value="1000" />

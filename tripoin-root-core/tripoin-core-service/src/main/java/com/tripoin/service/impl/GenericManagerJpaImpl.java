@@ -7,16 +7,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tripoin.dao.GenericDaoJpa;
-import com.tripoin.service.GenericManagerJpa;
+import com.tripoin.dao.IGenericDaoJpa;
+import com.tripoin.service.IGenericManagerJpa;
 
 @Service("genericManagerJpa")
-public class GenericManagerJpaImpl implements GenericManagerJpa {
+public class GenericManagerJpaImpl implements IGenericManagerJpa {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(GenericManagerJpaImpl.class);
 	
 	@Autowired
-	private GenericDaoJpa genericDao;
+	private IGenericDaoJpa genericDao;
 	
 	@Override
 	public <T> List<T> loadObjects(Class<T> objectType) throws Exception {
