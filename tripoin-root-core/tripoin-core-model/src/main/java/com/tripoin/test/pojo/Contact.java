@@ -16,7 +16,7 @@ public class Contact implements Serializable {
 	private static final long serialVersionUID = -1619638313470055353L;
 
 	@Id
-	@Column(name = "pk")
+	@Column(name = "id")
 	private int id;
 	
 	@Column(name = "name")

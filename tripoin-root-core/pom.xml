@@ -39,6 +39,8 @@
         <!-- Convenience property to set the Data Source -->
         <jtds.version>1.3.1</jtds.version>
         <postgresql.version>9.0-801.jdbc4</postgresql.version>
+        <mysql.version>5.1.22</mysql.version>
+        <oracle.version>10.2.0.5</oracle.version>
         
         <!-- Convenience property to set the Other Lib -->
         <log4j.version>1.2.16</log4j.version>

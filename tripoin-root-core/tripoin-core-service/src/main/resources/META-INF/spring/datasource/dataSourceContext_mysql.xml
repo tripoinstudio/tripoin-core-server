@@ -41,7 +41,7 @@
 	
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="false">
         <property name="driverClassName" value="${db.driverclass}"/>
-        <property name="url" value="jdbc:mysql://${db.host}/${db.schemaName}:${db.port}?createDatabaseIfNotExist=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true"/>
+        <property name="url" value="jdbc:mysql://${db.host}:${db.port}/${db.schemaName}?createDatabaseIfNotExist=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true"/>
         <property name="poolPreparedStatements" value="true"/>
         <property name="maxActive" value="10" />
         <property name="maxWait" value="1000" />
