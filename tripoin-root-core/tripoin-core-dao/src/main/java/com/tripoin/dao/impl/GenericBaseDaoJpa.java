@@ -35,20 +35,4 @@ public class GenericBaseDaoJpa extends ABaseDaoJpa {
 		return null;
 	}
 
-    
-	@Override
-	public void saveObject(Object objectType) throws Exception {
-		getEntityManager().persist(objectType);
-	}
-
-	@Override
-	public void updateObject(Class<?> objectType, Serializable key) throws Exception {
-		getEntityManager().merge(objectType);
-	}
-
-	@Override
-	public void deleteObject(Class<?> objectType) throws Exception {
-		getEntityManager().remove(objectType);
-	}	
-
 }

@@ -7,13 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Generated;
-
 @Entity
-@Table(name = "contact", schema = "public" )
+@Table(name = "contact")
 public class Contact implements Serializable {
 
 	/**
@@ -22,9 +19,8 @@ public class Contact implements Serializable {
 	private static final long serialVersionUID = -1619638313470055353L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "contact_seq")
-    @SequenceGenerator(name = "contact_seq", sequenceName = "contact_id_seq", allocationSize = 1)
 	private int id;
 	
 	@Column(name = "name")
