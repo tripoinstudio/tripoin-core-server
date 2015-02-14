@@ -2,6 +2,8 @@ package com.tripoin.test.server;
 
 import java.util.List;
 
+import javax.validation.constraints.AssertTrue;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -19,7 +21,7 @@ import com.tripoin.test.pojo.Contact;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { 
 		"classpath*:/META-INF/spring/applicationContext-jpa.xml",
-		"classpath*:/META-INF/spring/dataSourceContext.xml" })
+		"classpath*:/META-INF/spring/datasource/dataSourceContext_pg.xml" })
 public class ContactTest implements ApplicationContextAware  {
 	
 	private static transient final Logger LOGGER = LoggerFactory.getLogger(ContactTest.class);
@@ -49,6 +51,15 @@ public class ContactTest implements ApplicationContextAware  {
 		for(Contact contact : contacts){
 			LOGGER.debug("data :"+contact.toString());
 		}
+	}
+	
+	@Test
+	public void runTest2() throws Exception{
+		Contact contact = new Contact();
+		contact.setAddress("A");
+		contact.setEmail("a");
+		contact.setName("A");
+		contactService.saveObject(contact);
 	}
 
 }
