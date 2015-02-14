@@ -81,6 +81,7 @@ public class ContactController extends ABaseRESTController{
 			@RequestParam( value = "address" , required= true) String address
 			){
 		Contact contact = new Contact();
+		contact.setId(5);
 		contact.setName(name);
 		contact.setAddress(address);
 		contact.setEmail(email);

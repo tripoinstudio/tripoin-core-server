@@ -14,7 +14,7 @@ import com.tripoin.service.IGenericManagerJpa;
 public class GenericManagerJpaImpl implements IGenericManagerJpa {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(GenericManagerJpaImpl.class);
-	
+
 	@Autowired
 	private IGenericDaoJpa genericDao;
 	
@@ -25,4 +25,9 @@ public class GenericManagerJpaImpl implements IGenericManagerJpa {
 		return objects;
 	}
 	
+	@Override
+	public void saveObject(Object objectType) throws Exception {
+		LOGGER.debug("GenericManagerRPCJpa - Class name : "+objectType.toString());
+		genericDao.saveObject(objectType);	
+	}
 }

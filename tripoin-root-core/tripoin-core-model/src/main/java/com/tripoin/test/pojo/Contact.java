@@ -1,13 +1,19 @@
 package com.tripoin.test.pojo;
 
 import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Generated;
+
 @Entity
-@Table(name = "contact")
+@Table(name = "contact", schema = "public" )
 public class Contact implements Serializable {
 
 	/**
@@ -17,6 +23,8 @@ public class Contact implements Serializable {
 
 	@Id
 	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "contact_seq")
+    @SequenceGenerator(name = "contact_seq", sequenceName = "contact_id_seq", allocationSize = 1)
 	private int id;
 	
 	@Column(name = "name")

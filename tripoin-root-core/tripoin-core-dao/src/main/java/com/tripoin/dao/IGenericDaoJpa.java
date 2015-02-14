@@ -10,7 +10,7 @@ public interface IGenericDaoJpa {
 	
 	public <T> List<T> loadObjectsFilterKey(Class<T> objectType, Serializable key) throws Exception;
 	
-	public void saveObject(Class<?> objectType) throws Exception;
+	public void saveObject(Object objectType) throws Exception;
 	
 	public void updateObject(Class<?> objectType, Serializable key) throws Exception;
 	
