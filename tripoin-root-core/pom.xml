@@ -94,7 +94,8 @@
         <module>tripoin-core-model</module>       
         <module>tripoin-core-security</module> 
         <module>tripoin-core-dao</module>
-        <module>tripoin-core-service</module>        
+        <module>tripoin-core-service</module>
+        <module>tripoin-core-web-service</module>        
     </modules>
 
 </project>

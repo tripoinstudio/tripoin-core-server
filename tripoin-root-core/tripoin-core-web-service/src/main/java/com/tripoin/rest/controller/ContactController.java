@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.tripoin.service.GenericManagerJpa;
-import com.tripoin.test.pojo.ContactPG;
+import com.tripoin.service.IGenericManagerJpa;
+import com.tripoin.test.pojo.Contact;
 
 @Controller
 public class ContactController {
 	
-	@Autowired GenericManagerJpa contactService;
+	@Autowired IGenericManagerJpa contactService;
 
 	@ResponseBody
 	@RequestMapping( value = "/contact", method = {RequestMethod.GET} )
@@ -30,9 +30,9 @@ public class ContactController {
 	@RequestMapping( value = "/contact/selectAll", method = RequestMethod.GET )
 	public String selectData(HttpServletRequest servletRequest){		
 		ObjectMapper mapper = new ObjectMapper();
-		List<ContactPG> contacts = null;
+		List<Contact> contacts = null;
 		try {
-			contacts = contactService.loadObjects(ContactPG.class);
+			contacts = contactService.loadObjects(Contact.class);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 

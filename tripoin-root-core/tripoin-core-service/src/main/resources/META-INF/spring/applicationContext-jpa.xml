@@ -28,6 +28,10 @@
 	<context:component-scan base-package="com.tripoin.service">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
     </context:component-scan>
+    
+	<context:component-scan base-package="com.tripoin.rest">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
 	
 	<!-- ************ JPA configuration *********** -->		
     <bean id="entityManagerFactory"
