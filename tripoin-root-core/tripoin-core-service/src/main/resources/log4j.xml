@@ -9,7 +9,7 @@
         </layout>
     </appender>
 
-    <logger name="org.springframework.jdbc">
+    <logger name="org.springframework.batch">
         <level value="ALL"/>
     </logger>
 
@@ -18,7 +18,7 @@
     </logger>
 
     <root>
-        <level value="ALL"/> <!--set ALL (aktif) atau OFF (inaktif)-->
+        <level value="OFF"/> <!--set ALL (aktif) atau OFF (inaktif)-->
         <appender-ref ref="CONSOLE"/>
     </root>
 

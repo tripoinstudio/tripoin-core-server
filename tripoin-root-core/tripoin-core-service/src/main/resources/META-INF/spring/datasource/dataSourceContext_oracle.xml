@@ -35,6 +35,7 @@
 		<property name="locations">
 			<list>
 				<value>classpath*:/META-INF/properties/resources_oracle.properties</value>
+				<value>classpath*:/META-INF/properties/resources-default.properties</value>
 			</list>
 		</property>
 	</bean>
