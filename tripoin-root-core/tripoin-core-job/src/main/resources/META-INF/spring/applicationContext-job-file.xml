@@ -64,7 +64,7 @@
 					</bean>
 				</property>
 				<property name="fieldSetMapper">
-				    <bean class="com.tripoin.batch.impl.ReportFieldSetMapper" />
+				    <bean class="com.tripoin.batch.mapper.ReportFieldSetMapper" />
 				</property>
 			</bean>
 		</property>

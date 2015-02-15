@@ -24,7 +24,7 @@
 							http://www.springframework.org/schema/jdbc 
 							http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
     
-     <context:annotation-config/>
+    <context:annotation-config/>
 	  
      <!-- Enable @Transactional support -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
@@ -33,8 +33,7 @@
 	<aop:aspectj-autoproxy />    
 		
 	<!-- Property Configurer -->
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath*:/META-INF/properties/resources_sql_server.properties</value>
@@ -63,14 +62,14 @@
     <bean name="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
     	<constructor-arg index="0" ref="dataSource" />
     </bean>
-        
+    
 	<!-- spring batch transaction manager -->
-	<bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
-		
+	<bean id="transactionManagerBatch" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
+	
 	<!-- stored job-meta in database -->
 	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionManager" ref="transactionManagerBatch" />
 		<property name="databaseType" value="sqlserver" />
 	</bean>
 	
